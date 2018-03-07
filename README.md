@@ -7,11 +7,11 @@ This is a set of Python scripts that can be used to upload the results from a My
 # Features #
 * Automatic creation of SharePoint lists
 * Support for SharePoint field types:
-** DateTime
-** Integer
-** Number
-** Person
-** String
+  * DateTime
+  * Integer
+  * Number
+  * Person
+  * String
 * Uses SharePoint REST API for all operations
 
 # Requirements #
@@ -27,9 +27,9 @@ Query files are placed in the queries folder and when the script is run it will:
   1. If there isn't a List with the same name as the file (without the .sql extension), create the list
   1. If there is already a List, move on to the next file
 
-1. After lists are checked against queries, each query is executed.
-  1. For each row in the results,
-    1. If a matching item exists in the list, compare each column value with corresponding field value
+2. After lists are checked against queries, each query is executed.
+  2. For each row in the results,
+    2. If a matching item exists in the list, compare each column value with corresponding field value
       Update fields in List as necessary
-    1. If a matching row does not exist in the List, add the row as a new item in the list
-    1. If an item exists in the list that is not a row in the results, remove the item from the list
+    2. If a matching row does not exist in the List, add the row as a new item in the list
+    2. If an item exists in the list that is not a row in the results, remove the item from the list
